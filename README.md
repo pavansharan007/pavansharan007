@@ -92,9 +92,9 @@ I'm a passionate developer who loves building tools and contributing to the comm
 ```text
 <!-- START_STATS -->
 - GitHub Stats -------------------------------------------------------------
-. Repos: .... 95 {Contributed: 133} | Stars: ............. 342
-. Commmits: ................... 2,116 | Followers: ......... 196
-. Lines of Code on GitHub: 446,276 ( 523,178++, 76,902-- )
+. Repos: .... 44 {Contributed: 44} | Stars: .............   0
+. Commmits: ................... 44 | Followers: .........   5
+. Lines of Code on GitHub: 981,864 ( 987,096++, 5,232-- )
 <!-- END_STATS -->
 ```
 
