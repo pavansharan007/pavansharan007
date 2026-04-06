@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./ascii-art.png" alt="ASCII Art Profile" width="500" />
+<img src="./ASCII-art.png" alt="ASCII Art Profile" width="500" />
 
 # Pavan Sharan
 ### Software Engineer | Open Source Enthusiast
