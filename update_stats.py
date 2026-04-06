@@ -79,26 +79,20 @@ def update_readme(stats):
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
         
-    # Format the stats block using ANSI codes
-    ESC = "\x1b"
-    GREEN = f"{ESC}[32m"
-    RED = f"{ESC}[31m"
-    RESET = f"{ESC}[0m"
-    
     stats_block = (
-        "```ansi\n"
-        "╔══════════════════════════════════════════╗\n"
-        "║           ⚡  GitHub Stats  ⚡            ║\n"
-        "╠══════════════════════════════════════════╣\n"
-        f"║  📦 Repos      : {stats['repos']:>3}   (+ {stats['contributed']} contrib)  ║\n"
-        f"║  ⭐ Stars      : {stats['stars']:>4}                   ║\n"
-        f"║  📝 Commits    : {stats['commits']:>6,}                 ║\n"
-        f"║  👥 Followers  : {stats['followers']:>4}                   ║\n"
-        "╠══════════════════════════════════════════╣\n"
-        f"║  Lines of Code : {stats['loc']:>9,}               ║\n"
-        f"║  {GREEN} ++ Added    : {stats['additions']:>9,}{RESET}                ║\n"
-        f"║  {RED} -- Deleted  : {stats['deletions']:>9,}{RESET}                ║\n"
-        "╚══════════════════════════════════════════╝\n"
+        "```diff\n"
+        "  ╔══════════════════════════════════════════╗\n"
+        "  ║           ⚡  GitHub Stats  ⚡            ║\n"
+        "  ╠══════════════════════════════════════════╣\n"
+        f"  ║  📦 Repos      : {stats['repos']:>3}                   ║\n"
+        f"  ║  ⭐ Stars      : {stats['stars']:>4}                   ║\n"
+        f"  ║  📝 Commits    : {stats['commits']:>6,}                 ║\n"
+        f"  ║  👥 Followers  : {stats['followers']:>4}                   ║\n"
+        "  ╠══════════════════════════════════════════╣\n"
+        f"  ║  Lines of Code : {stats['loc']:>9,}               ║\n"
+        f"+ ║  ++ Added      : {stats['additions']:>9,}               ║\n"
+        f"- ║  -- Deleted    : {stats['deletions']:>9,}               ║\n"
+        "  ╚══════════════════════════════════════════╝\n"
         "```"
     )
     
