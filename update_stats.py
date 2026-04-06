@@ -93,7 +93,8 @@ def update_readme(stats):
         f"+ ║  ++ Added      : {stats['additions']:>9,}               ║\n"
         f"- ║  -- Deleted    : {stats['deletions']:>9,}               ║\n"
         "  ╚══════════════════════════════════════════╝\n"
-        "```"
+        "```\n"
+        f"<!-- Last Refresh: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')} -->"
     )
     
     pattern = re.compile(r"(<!-- START_STATS -->\n)(.*?)(\n<!-- END_STATS -->)", re.DOTALL)
