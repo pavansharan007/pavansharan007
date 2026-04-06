@@ -32,8 +32,8 @@ jobs:
 
       - name: Commit and Push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "pavansharan1316@gmail.com"
+          git config --local user.name "pavansharan007"
           git add README.md
           git commit -m "docs: auto update github stats" || echo "No changes to commit"
           git pull origin main --rebase
