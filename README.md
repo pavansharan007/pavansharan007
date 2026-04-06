@@ -9,7 +9,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="20">
   <tr>
     <td width="45%" align="center" valign="middle">
-      <img src="./ASCII-art.png" alt="Pavan Sharan ASCII Portrait" width="380" />
+      <img src="./ASCII-art.png" alt="Pavan Sharan ASCII Portrait" width="380" height="300"/>
     </td>
     <td width="55%" valign="middle">
 
