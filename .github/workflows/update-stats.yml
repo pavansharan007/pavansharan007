@@ -9,6 +9,9 @@ on:
 permissions:
   contents: write # This gives the action permission to push code updates to the README!
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
