@@ -35,7 +35,6 @@
   </tr>
 </table>
 
----
-![Profile views](https://komarev.com/ghpvc/?username=your-github-username)   
+![Profile views](https://komarev.com/ghpvc/?username=pavansharan007&color=blue&style=flat-square)  
 ### About Me
 I'm a passionate developer who loves building tools and contributing to the community. Welcome to my GitHub profile!
