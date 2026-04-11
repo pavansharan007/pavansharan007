@@ -8,21 +8,32 @@ from datetime import datetime
 USERNAME = "pavansharan007"
 TOKEN = os.getenv("GITHUB_TOKEN")
 
-def fetch_json(url):
+import time
+
+def fetch_json(url, retries=3):
     req = urllib.request.Request(url)
     req.add_header("User-Agent", "Mozilla/5.0")
     if TOKEN:
         req.add_header("Authorization", f"token {TOKEN}")
         
-    try:
-        with urllib.request.urlopen(req) as response:
-            return json.loads(response.read().decode())
-    except urllib.error.HTTPError as e:
-        print(f"HTTPError on {url}: {e.code}")
-        return None
-    except Exception as e:
-        print(f"Error on {url}: {e}")
-        return None
+    for i in range(retries):
+        try:
+            with urllib.request.urlopen(req) as response:
+                if response.status == 202: # GitHub is still calculating
+                    print(f"  > GitHub is calculating stats for {url.split('/')[-2]}... retrying in 2s")
+                    time.sleep(2)
+                    continue
+                return json.loads(response.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code == 403:
+                print(f"  > Rate limit hit or forbidden on {url}")
+                return None
+            print(f"HTTPError on {url}: {e.code}")
+            return None
+        except Exception as e:
+            print(f"Error on {url}: {e}")
+            return None
+    return None
 
 def get_user_stats():
     print("Fetching user data...")
